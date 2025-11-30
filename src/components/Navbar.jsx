@@ -19,7 +19,6 @@ function Navbar({ darkMode, toggleDarkMode }) {
     <nav className="sticky top-0 z-50 bg-white dark:bg-slate-800 shadow-md transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <Link
             to="hero"
             smooth={true}
@@ -31,7 +30,6 @@ function Navbar({ darkMode, toggleDarkMode }) {
             Luis
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <Link
@@ -49,7 +47,6 @@ function Navbar({ darkMode, toggleDarkMode }) {
             ))}
           </div>
 
-          {/* Dark Mode Toggle & Resume Button */}
           <div className="hidden md:flex items-center gap-4">
             {/* <button
               onClick={toggleDarkMode}
@@ -68,7 +65,6 @@ function Navbar({ darkMode, toggleDarkMode }) {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-4">
             <button
               onClick={toggleDarkMode}
@@ -88,7 +84,6 @@ function Navbar({ darkMode, toggleDarkMode }) {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden pb-4 space-y-2 animate-slideUp bg-white dark:bg-slate-800 border-t border-gray-200 dark:border-slate-700">
             {navItems.map((item) => (

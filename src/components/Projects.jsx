@@ -69,7 +69,6 @@ export default function Projects(){
               className="card overflow-hidden"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-                {/* Image */}
                 <div className={`${index % 2 === 1 ? 'md:order-2' : ''}`}>
                   <img
                     src={project.image}
@@ -79,7 +78,6 @@ export default function Projects(){
                   />
                 </div>
 
-                {/* Content */}
                 <div className={`${index % 2 === 1 ? 'md:order-1' : ''}`}>
                   <div className="mb-3">
                     <span className="text-sm font-semibold text-secondary">
@@ -93,7 +91,6 @@ export default function Projects(){
                     {project.desc}
                   </p>
 
-                  {/* Technologies */}
                   <div className="mb-6">
                     <p className="text-sm font-semibold text-primary mb-2">
                       Technologies:
@@ -110,7 +107,6 @@ export default function Projects(){
                     </div>
                   </div>
 
-                  {/* Links */}
                   <div className="flex gap-4">
                     <a
                       href={project.github}

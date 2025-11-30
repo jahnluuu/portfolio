@@ -43,7 +43,6 @@ export default function Contact() {
           viewport={{ once: true }}
           className="space-y-8 max-w-2xl mx-auto"
         >
-          {/* Email */}
           <motion.div variants={itemVariants} className="card">
             <div className="flex items-center gap-6">
               <FiMail size={40} className="text-primary flex-shrink-0" />
@@ -61,7 +60,6 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Phone */}
           <motion.div variants={itemVariants} className="card">
             <div className="flex items-center gap-6">
               <FiPhone size={40} className="text-primary flex-shrink-0" />
@@ -79,7 +77,6 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Social Links */}
           <motion.div variants={itemVariants} className="card">
             <h3 className="font-heading text-3xl font-bold text-primary mb-8 text-center">
               Follow Me

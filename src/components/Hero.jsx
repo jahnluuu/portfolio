@@ -19,18 +19,14 @@ export default function Hero() {
 
   return (
     <section id="hero" className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
 
-      {/* Blurred spotlight effect */}
       <div className="absolute inset-0">
         <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 w-96 h-96 bg-blue-400/30 blur-[120px] rounded-full"></div>
       </div>
 
-      {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 flex flex-col md:flex-row items-center gap-12">
 
-        {/* Left Text Section */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -61,7 +57,6 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Profile Image with Spotlight Glow */}
         <motion.div
           variants={itemVariants}
           initial="hidden"
@@ -69,7 +64,6 @@ export default function Hero() {
           viewport={{ once: true }}
           className="relative"
         >
-          {/* Glow behind photo */}
           <div className="absolute inset-0 bg-blue-400/40 blur-3xl rounded-full scale-150"></div>
 
           {/* Image */}
@@ -81,7 +75,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll Down */}
       <motion.div
         variants={itemVariants}
         initial="hidden"

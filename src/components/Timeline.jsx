@@ -12,14 +12,6 @@ function Timeline() {
       date: '2022 - Present',
       description: ' Relevant Coursework: Web Development, Data Structures, OOP, Database Management Systems, Etc.',
     },
-    {
-      id: 2,
-      type: 'experience',
-      title: 'Web Development Intern',
-      institution: 'Tech Startup Inc.',
-      date: 'June 2023 - August 2023',
-      description: 'Built responsive web applications using React and Node.js. Collaborated with senior developers on real-world projects.',
-    },
   ];
 
   const containerVariants = {
@@ -50,7 +42,6 @@ function Timeline() {
           {events.map((event, index) => (
             <motion.div key={event.id} variants={itemVariants}>
               <div className="flex gap-6">
-                {/* Timeline Dot */}
                 <div className="flex flex-col items-center">
                   <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white shadow-lg z-10">
                     {event.type === 'education' ? (
@@ -64,7 +55,6 @@ function Timeline() {
                   )}
                 </div>
 
-                {/* Content */}
                 <div className="flex-1 pt-2">
                   <div className="card">
                     <div className="flex items-start justify-between mb-2">
