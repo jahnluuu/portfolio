@@ -16,21 +16,21 @@ function Navbar({ darkMode, toggleDarkMode }) {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-white dark:bg-slate-800 shadow-md transition-colors duration-300">
+    <nav className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 shadow-sm backdrop-blur-xl dark:border-slate-700/80 dark:bg-slate-900/90 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex h-[4.5rem] items-center justify-between">
           <Link
             to="hero"
             smooth={true}
             duration={500}
             spy={true}
             offset={-70}
-            className="text-2xl font-heading font-bold text-primary cursor-pointer hover:text-blue-700 transition-colors duration-300"
+            className="cursor-pointer font-heading text-2xl font-bold tracking-tight text-dark transition-colors duration-300 hover:text-primary dark:text-light"
           >
-            Luis
+            Luis Portfolio
           </Link>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden items-center gap-7 md:flex">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -40,14 +40,14 @@ function Navbar({ darkMode, toggleDarkMode }) {
                 spy={true}
                 offset={-70}
                 activeClass="text-primary border-b-2 border-primary"
-                className="text-dark dark:text-light hover:text-primary dark:hover:text-secondary transition-colors duration-300 cursor-pointer font-medium pb-2"
+                className="cursor-pointer border-b-2 border-transparent pb-1.5 text-sm font-semibold text-slate-600 transition-colors duration-300 hover:border-secondary hover:text-primary dark:text-slate-300 dark:hover:text-secondary"
               >
                 {item.name}
               </Link>
             ))}
           </div>
 
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden items-center gap-4 md:flex">
             {/* <button
               onClick={toggleDarkMode}
               className="p-2 rounded-lg bg-gray-100 dark:bg-slate-700 hover:bg-gray-200 dark:hover:bg-slate-600 transition-colors duration-300 text-dark dark:text-light"
@@ -65,10 +65,10 @@ function Navbar({ darkMode, toggleDarkMode }) {
             </a>
           </div>
 
-          <div className="md:hidden flex items-center gap-4">
+          <div className="flex items-center gap-2 md:hidden">
             <button
               onClick={toggleDarkMode}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-slate-700 text-dark dark:text-light transition-colors duration-300"
+              className="rounded-lg p-2 text-slate-600 transition-colors duration-300 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800"
               aria-label="Toggle dark mode"
               title={darkMode ? 'Light Mode' : 'Dark Mode'}
             >
@@ -76,7 +76,7 @@ function Navbar({ darkMode, toggleDarkMode }) {
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-slate-700 text-dark dark:text-light transition-colors duration-300"
+              className="rounded-lg p-2 text-slate-600 transition-colors duration-300 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800"
               aria-label="Toggle menu"
             >
               {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}

@@ -36,7 +36,7 @@ function Timeline() {
   };
 
   return (
-    <section id="timeline" className="py-20 bg-gray-50 dark:bg-slate-900">
+    <section id="timeline" className="bg-slate-100 py-24 dark:bg-slate-950">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="section-heading">Timeline</h2>
 
@@ -64,21 +64,21 @@ function Timeline() {
                 </div>
 
                 <div className="flex-1 pt-2">
-                  <div className="card">
-                    <div className="flex items-start justify-between mb-2">
+                  <div className="card border-l-4 border-l-primary">
+                    <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                       <div>
-                        <h3 className="font-heading text-xl font-bold text-primary">
+                        <h3 className="font-heading text-xl font-bold text-dark dark:text-light">
                           {event.title}
                         </h3>
                         <p className="text-secondary font-semibold">
                           {event.institution}
                         </p>
                       </div>
-                      <span className="text-sm font-semibold text-gray-500 dark:text-gray-400">
+                      <span className="text-sm font-semibold text-primary sm:text-right">
                         {event.date}
                       </span>
                     </div>
-                    <p className="text-dark dark:text-light leading-relaxed">
+                    <p className="leading-relaxed text-slate-600 dark:text-slate-300">
                       {event.description}
                     </p>
                   </div>

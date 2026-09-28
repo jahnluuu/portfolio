@@ -32,27 +32,30 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="w-full min-h-screen flex items-center justify-center bg-gray-50 dark:bg-slate-900 py-20">
+    <section id="contact" className="flex min-h-[80vh] w-full items-center justify-center bg-slate-950 py-24">
       <div className="max-w-4xl w-full mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="section-heading">Get In Touch</h2>
+        <div className="mb-12 text-center">
+          <p className="mb-4 text-sm font-bold uppercase tracking-[0.22em] text-amber-300">Get In Touch</p>
+          <h2 className="mb-4 font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl">Let’s build something useful.</h2>
+        </div>
 
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="space-y-8 max-w-2xl mx-auto"
+          className="mx-auto max-w-2xl space-y-5"
         >
-          <motion.div variants={itemVariants} className="card">
-            <div className="flex items-center gap-6">
-              <FiMail size={40} className="text-primary flex-shrink-0" />
+          <motion.div variants={itemVariants} className="rounded-2xl border border-slate-800 bg-slate-900 p-6 shadow-2xl sm:p-8">
+            <div className="flex items-center gap-5">
+              <FiMail size={30} className="flex-shrink-0 text-amber-300" />
               <div>
-                <h3 className="font-heading text-2xl font-bold text-primary mb-2">
+                <h3 className="mb-2 font-heading text-xl font-bold text-white">
                   Email
                 </h3>
                 <a
                   href="mailto:luis.pepito789@gmail.com"
-                  className="text-dark dark:text-light link-hover text-lg hover:text-primary"
+                  className="text-lg text-slate-300 transition-colors hover:text-amber-300"
                 >
                   luis.pepito789@gmail.com
                 </a>
@@ -60,16 +63,16 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="card">
-            <div className="flex items-center gap-6">
-              <FiPhone size={40} className="text-primary flex-shrink-0" />
+          <motion.div variants={itemVariants} className="rounded-2xl border border-slate-800 bg-slate-900 p-6 shadow-2xl sm:p-8">
+            <div className="flex items-center gap-5">
+              <FiPhone size={30} className="flex-shrink-0 text-amber-300" />
               <div>
-                <h3 className="font-heading text-2xl font-bold text-primary mb-2">
+                <h3 className="mb-2 font-heading text-xl font-bold text-white">
                   Phone
                 </h3>
                 <a
                   href="tel:+639620413098"
-                  className="text-dark dark:text-light link-hover text-lg hover:text-primary"
+                  className="text-lg text-slate-300 transition-colors hover:text-amber-300"
                 >
                   +63 962 041 3098
                 </a>
@@ -77,8 +80,8 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="card">
-            <h3 className="font-heading text-3xl font-bold text-primary mb-8 text-center">
+          <motion.div variants={itemVariants} className="rounded-2xl border border-slate-800 bg-slate-900 p-6 shadow-2xl sm:p-8">
+            <h3 className="mb-7 text-center font-heading text-2xl font-bold text-white">
               Follow Me
             </h3>
             <div className="flex gap-8 justify-center flex-wrap">
@@ -86,7 +89,7 @@ export default function Contact() {
                 href="https://linkedin.com/in/john-luis-083635384"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 bg-gray-100 dark:bg-slate-700 rounded-full text-primary hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-110"
+                className="rounded-full border border-slate-700 p-4 text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300 hover:text-amber-300"
                 aria-label="LinkedIn"
                 title="LinkedIn"
               >
@@ -96,7 +99,7 @@ export default function Contact() {
                 href="https://github.com/jahnluuu"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 bg-gray-100 dark:bg-slate-700 rounded-full text-primary hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-110"
+                className="rounded-full border border-slate-700 p-4 text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300 hover:text-amber-300"
                 aria-label="GitHub"
                 title="GitHub"
               >
@@ -106,7 +109,7 @@ export default function Contact() {
                 href="https://www.facebook.com/Jahnluuu/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 bg-gray-100 dark:bg-slate-700 rounded-full text-primary hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-110"
+                className="rounded-full border border-slate-700 p-4 text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300 hover:text-amber-300"
                 aria-label="Facebook"
                 title="Facebook"
               >
