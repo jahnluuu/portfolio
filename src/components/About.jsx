@@ -31,21 +31,26 @@ export default function About(){
                         variants={itemVariants}
                         className="text-lg text-dark dark:text-light leading-relaxed"
                     >
-                        I'm a passionate student developer with a strong foundation in modern web technologies. I specialize in building responsive, user-centric applications using React, Springboot, Django and various other technologies.
+                        I'm a software engineer with a strong foundation in building modern, efficient, and user-focused web applications.
+                        My work centers on full-stack development using Java, Spring Boot, React, and other technologies that support scalable,
+                        maintainable, and business-ready systems.
                     </motion.p>
 
                     <motion.p
                         variants={itemVariants}
                         className="text-lg text-dark dark:text-light leading-relaxed"
                     >
-                        My journey in web development started with curiosity and has evolved into a commitment to continuous learning and growth. I enjoy solving complex problems, collaborating with teams, and transforming ideas into reality through code.
+                        My journey in software development began with curiosity and grew through hands-on projects, teamwork, and continuous
+                        learning. I enjoy solving technical challenges, designing practical solutions, and turning real-world requirements into
+                        reliable software products.
                     </motion.p>
 
                     <motion.p
                         variants={itemVariants}
                         className="text-lg text-dark dark:text-light leading-relaxed"
                     >
-                        Currently, I'm seeking internship opportunities where I can contribute my skills, learn from experienced professionals, and make a meaningful impact on real-world projects. I'm particularly interested in roles that challenge me to grow and expand my technical expertise.
+                        I am currently focused on developing software that combines backend logic, responsive design, and strong engineering
+                        practices. I am excited to contribute to teams building meaningful digital products and continue growing as a software engineer.
                     </motion.p>
 
                     <motion.div

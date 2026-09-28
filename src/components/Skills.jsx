@@ -10,8 +10,11 @@ import {
   FaCss3Alt,
   FaFigma,
   FaJava,
+  FaProjectDiagram,
+  FaTasks,
+  FaBolt,
 } from 'react-icons/fa';
-import { SiSpringboot, SiPhp, SiCanva } from 'react-icons/si';
+import { SiSpringboot, SiPhp, SiCanva, SiJira, SiCardano } from 'react-icons/si';
 
 function Skills() {
   const skillCategories = [
@@ -39,6 +42,21 @@ function Skills() {
         { name: 'Git', icon: FaGitAlt, color: 'text-orange-600' },
         { name: 'Figma', icon: FaFigma, color: 'text-purple-500' },
         { name: 'Canva', icon: SiCanva, color: 'text-blue-500' },
+      ],
+    },
+    {
+      name: 'Agile & Workflow',
+      skills: [
+        { name: 'Jira', icon: SiJira, color: 'text-blue-600' },
+        { name: 'SDLC', icon: FaProjectDiagram, color: 'text-indigo-500' },
+        { name: 'Scrum', icon: FaTasks, color: 'text-amber-500' },
+        { name: 'Agile', icon: FaBolt, color: 'text-pink-500' },
+      ],
+    },
+    {
+      name: 'Blockchain',
+      skills: [
+        { name: 'Cardano Testnet (Basic)', icon: SiCardano, color: 'text-blue-500' },
       ],
     },
   ];
@@ -74,7 +92,7 @@ function Skills() {
               variants={itemVariants}
               className="card"
             >
-              <h3 className="font-heading text-2xl font-bold text-primary mb-8">
+              <h3 className="font-heading text-xl font-bold text-primary mb-8 whitespace-nowrap">
                 {category.name}
               </h3>
               <div className="grid grid-cols-2 gap-6">
@@ -89,7 +107,13 @@ function Skills() {
                         size={48}
                         className={`${skill.color} mb-3`}
                       />
-                      <p className="text-base font-semibold text-center">
+                      <p
+                        className={`text-base font-semibold text-center ${
+                          skill.name === 'Cardano Testnet (Basic)'
+                            ? 'whitespace-normal leading-tight'
+                            : 'whitespace-nowrap'
+                        }`}
+                      >
                         {skill.name}
                       </p>
                     </div>

@@ -37,17 +37,17 @@ export default function Hero() {
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
             John Luis Pepito
           </h1>
-          <p className="text-xl text-blue-300 mb-4">IT Student</p>
+          <p className="text-xl text-blue-300 mb-4">Software Engineer</p>
 
           <p className="text-slate-300 leading-relaxed max-w-xl">
-            IT student who has developed web applications and solved programming
-            problems. Comfortable with Java, Python and React, and always eager
-            to learn new tools while working on real projects and collaborations.
+            Software engineer focused on building reliable, scalable, and user-friendly web applications.
+            I worked with Java, Spring Boot, React, and modern full-stack tools to develop solutions that improve
+            business processes and deliver a strong user experience.
           </p>
 
           <div className="mt-8">
             <a
-              href="/mnt/data/JohnLuis_Pepito_Resume.pdf"
+              href="/resume.pdf"
               target="_blank"
               rel="noreferrer"
               className="inline-block bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition"
