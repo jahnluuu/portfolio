@@ -8,12 +8,24 @@
   box-sizing: border-box;
 }
 
+:root {
+  --ink: #172033;
+  --muted: #586579;
+  --paper: #f7f8fa;
+  --surface: #ffffff;
+  --line: #e4e8ee;
+  --blue: #2563eb;
+  --amber: #f59e0b;
+}
+
 html, body, #root {
   height: 100%;
 }
 
 body {
-  @apply font-sans bg-light text-dark transition-colors duration-300;
+  @apply font-sans bg-light text-dark transition-colors duration-300 antialiased;
+  background-image: radial-gradient(circle at 10% 10%, rgba(37, 99, 235, 0.06), transparent 28rem),
+    radial-gradient(circle at 90% 45%, rgba(245, 158, 11, 0.05), transparent 24rem);
 }
 
 html.dark body {
@@ -24,21 +36,35 @@ html {
   scroll-behavior: smooth;
 }
 
+::selection {
+  @apply bg-primary text-white;
+}
+
+a:focus-visible,
+button:focus-visible {
+  @apply outline-none ring-2 ring-secondary ring-offset-2 ring-offset-white dark:ring-offset-slate-900;
+}
+
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105;
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 font-semibold text-white shadow-lg shadow-blue-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-500/25;
   }
 
   .btn-secondary {
-    @apply px-6 py-3 bg-secondary text-white rounded-lg font-semibold hover:bg-amber-600 transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-secondary px-5 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-amber-600;
   }
 
   .section-heading {
-    @apply font-heading text-4xl font-bold text-primary mb-12 text-center;
+    @apply relative mb-12 text-center font-heading text-3xl font-bold tracking-tight text-dark dark:text-light sm:text-4xl;
+  }
+
+  .section-heading::after {
+    content: '';
+    @apply mx-auto mt-4 block h-1 w-12 rounded-full bg-secondary;
   }
 
   .card {
-    @apply bg-white dark:bg-slate-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6;
+    @apply rounded-2xl border border-gray-100 bg-white p-6 shadow-lg shadow-slate-200/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-300/40 dark:border-slate-700 dark:bg-slate-800 dark:shadow-none;
   }
 
   .link-hover {

@@ -6,11 +6,19 @@ function Timeline() {
   const events = [
     {
       id: 1,
+      type: 'work',
+      title: 'Software Engineer',
+      institution: 'Kyocera Document Solutions Development Philippines, Inc.',
+      date: 'Feb 2026 - Present',
+      description: 'Develops and maintains embedded applications using Kyocera HyPAS and Java-based technologies, working with HyPAS APIs to build features for Kyocera multifunction devices. Participates in the corporate software development lifecycle, including requirements, development, testing, debugging, documentation, maintenance, code reviews, and issue resolution. Follows established coding standards and project guidelines while contributing to Agile and Scrum activities such as sprint planning, daily stand-ups, task tracking, and sprint reviews. Uses Jira to manage tasks, track issues, monitor progress, and support project planning while collaborating with team members to maintain code quality and continuously improve development processes.',
+    },
+    {
+      id: 2,
       type: 'education',
       title: 'Bachelor of Science in Information Technology',
       institution: 'Cebu Institute of Technology - University',
-      date: '2022 - Present',
-      description: ' Relevant Coursework: Web Development, Data Structures, OOP, Database Management Systems, Etc.',
+      date: '2022 - 2026',
+      description: 'Built a broad foundation in programming, object-oriented development, data structures and algorithms, web and mobile application development, database management, and networking. Developed additional knowledge in systems integration and architecture, systems administration, information assurance and security, data analytics, software testing and quality assurance, project management, emerging technologies, and IT strategy through laboratory work, capstone projects, and research.',
     },
   ];
 
@@ -28,7 +36,7 @@ function Timeline() {
   };
 
   return (
-    <section id="timeline" className="py-20 bg-gray-50 dark:bg-slate-900">
+    <section id="timeline" className="bg-slate-100 py-24 dark:bg-slate-950">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="section-heading">Timeline</h2>
 
@@ -42,7 +50,7 @@ function Timeline() {
           {events.map((event, index) => (
             <motion.div key={event.id} variants={itemVariants}>
               <div className="flex gap-6">
-                <div className="flex flex-col items-center">
+                <div className="relative flex flex-col items-center">
                   <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white shadow-lg z-10">
                     {event.type === 'education' ? (
                       <FiBook size={24} />
@@ -51,26 +59,26 @@ function Timeline() {
                     )}
                   </div>
                   {index !== events.length - 1 && (
-                    <div className="w-1 h-24 bg-primary mt-2"></div>
+                    <div className="absolute top-12 -bottom-2 w-1 bg-primary"></div>
                   )}
                 </div>
 
                 <div className="flex-1 pt-2">
-                  <div className="card">
-                    <div className="flex items-start justify-between mb-2">
+                  <div className="card border-l-4 border-l-primary">
+                    <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                       <div>
-                        <h3 className="font-heading text-xl font-bold text-primary">
+                        <h3 className="font-heading text-xl font-bold text-dark dark:text-light">
                           {event.title}
                         </h3>
                         <p className="text-secondary font-semibold">
                           {event.institution}
                         </p>
                       </div>
-                      <span className="text-sm font-semibold text-gray-500 dark:text-gray-400">
+                      <span className="text-sm font-semibold text-primary sm:text-right">
                         {event.date}
                       </span>
                     </div>
-                    <p className="text-dark dark:text-light leading-relaxed">
+                    <p className="leading-relaxed text-slate-600 dark:text-slate-300">
                       {event.description}
                     </p>
                   </div>

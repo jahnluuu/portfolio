@@ -33,7 +33,7 @@ function Achievements() {
       id: 4,
       title: 'AWS Academy - Cloud Architecting',
       issuer: 'Amazon Web Services',
-      date: 'Ongoing',
+      date: 'December 2025',
       description: 'Cloud Architecture training and design principles',
       type: 'Certification',
     },

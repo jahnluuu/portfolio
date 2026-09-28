@@ -51,55 +51,63 @@ export default function Projects(){
       };
     
     return (
-        <section id="projects" className="py-20 bg-gray-50 dark:bg-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="section-heading">Projects</h2>
+        <section id="projects" className="bg-slate-950 py-24 text-white">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-14 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+          <div>
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-amber-300">Selected work</p>
+            <h2 className="mb-0 text-left font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl">Projects</h2>
+          </div>
+          <p className="max-w-sm text-sm leading-relaxed text-slate-400 md:text-right">
+            A selection of systems I have built from idea to implementation, with a focus on useful software and thoughtful interfaces.
+          </p>
+        </div>
 
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="space-y-8"
+          className="space-y-10"
         >
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
               variants={itemVariants}
-              className="card overflow-hidden"
+              className="group overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/80 shadow-2xl shadow-black/10"
             >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-                <div className={`${index % 2 === 1 ? 'md:order-2' : ''}`}>
+              <div className="grid grid-cols-1 items-stretch md:grid-cols-2">
+                <div className={`relative min-h-[260px] overflow-hidden ${index % 2 === 1 ? 'md:order-2' : ''}`}>
+                  <div className="absolute left-5 top-5 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-slate-950/70 font-heading text-sm font-bold text-amber-300 backdrop-blur-sm">
+                    {String(index + 1).padStart(2, '0')}
+                  </div>
                   <img
                     src={project.image}
                     alt={project.title}
                     loading="lazy"
-                    className="w-full h-64 object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                    className="h-full min-h-[260px] w-full object-cover opacity-80 transition duration-700 group-hover:scale-105 group-hover:opacity-100"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
                 </div>
 
-                <div className={`${index % 2 === 1 ? 'md:order-1' : ''}`}>
-                  <div className="mb-3">
-                    <span className="text-sm font-semibold text-secondary">
-                      {project.role}
-                    </span>
+                <div className={`flex flex-col justify-center p-7 sm:p-10 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
+                  <div className="mb-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-bold uppercase tracking-[0.14em]">
+                    <span className="text-amber-300">{project.role}</span>
+                    <span className="text-slate-500">{project.dates}</span>
                   </div>
-                  <h3 className="font-heading text-2xl font-bold text-primary mb-4">
+                  <h3 className="mb-4 font-heading text-2xl font-bold leading-tight text-white sm:text-3xl">
                     {project.title}
                   </h3>
-                  <p className="text-dark dark:text-light mb-4 leading-relaxed">
+                  <p className="mb-7 leading-relaxed text-slate-400">
                     {project.desc}
                   </p>
 
-                  <div className="mb-6">
-                    <p className="text-sm font-semibold text-primary mb-2">
-                      Technologies:
-                    </p>
+                  <div className="mb-8">
                     <div className="flex flex-wrap gap-2">
                       {project.tech.map((tech) => (
                         <span
                           key={tech}
-                          className="px-3 py-1 bg-primary text-white rounded-full text-xs font-semibold"
+                          className="rounded-full border border-slate-700 px-3 py-1 text-xs font-semibold text-slate-300"
                         >
                           {tech}
                         </span>
@@ -112,10 +120,10 @@ export default function Projects(){
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 btn-primary"
+                      className="inline-flex items-center gap-2 font-semibold text-white transition-colors hover:text-amber-300"
                     >
                       <FiGithub size={18} />
-                      GitHub
+                      View source <span aria-hidden="true">↗</span>
                     </a>
                   </div>
                 </div>
